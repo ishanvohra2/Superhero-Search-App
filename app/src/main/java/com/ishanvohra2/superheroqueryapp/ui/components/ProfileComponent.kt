@@ -15,7 +15,6 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -30,6 +29,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 import coil.request.CachePolicy
 import coil.request.ImageRequest
@@ -164,8 +164,8 @@ class ProfileComponent(private val onBackPressed: () -> Unit) {
                     Column(
                         modifier = Modifier.padding(dimensionResource(id = R.dimen.medium_spacing))
                     ) {
-                        Text(text = "Intelligence", style = MaterialTheme.typography.titleLarge)
-                        Text(text = superhero.intelligence, style = MaterialTheme.typography.bodyLarge)
+                        Text(text = "Intelligence", fontSize = 16.sp)
+                        Text(text = superhero.intelligence, fontSize = 18.sp, fontWeight = FontWeight.Bold)
                     }
                 }
                 Card(
@@ -177,8 +177,8 @@ class ProfileComponent(private val onBackPressed: () -> Unit) {
                     Column(
                         modifier = Modifier.padding(dimensionResource(id = R.dimen.medium_spacing))
                     ) {
-                        Text(text = "Strength", style = MaterialTheme.typography.titleLarge)
-                        Text(text = superhero.strength, style = MaterialTheme.typography.bodyLarge)
+                        Text(text = "Strength", fontSize = 16.sp)
+                        Text(text = superhero.strength, fontSize = 18.sp, fontWeight = FontWeight.Bold)
                     }
                 }
             }
@@ -201,8 +201,8 @@ class ProfileComponent(private val onBackPressed: () -> Unit) {
                     Column(
                         modifier = Modifier.padding(dimensionResource(id = R.dimen.medium_spacing))
                     ) {
-                        Text(text = "Speed", style = MaterialTheme.typography.titleLarge)
-                        Text(text = superhero.speed, style = MaterialTheme.typography.bodyLarge)
+                        Text(text = "Speed", fontSize = 16.sp)
+                        Text(text = superhero.speed, fontSize = 18.sp, fontWeight = FontWeight.Bold)
                     }
                 }
                 Card(
@@ -214,8 +214,8 @@ class ProfileComponent(private val onBackPressed: () -> Unit) {
                     Column(
                         modifier = Modifier.padding(dimensionResource(id = R.dimen.medium_spacing))
                     ) {
-                        Text(text = "Durability", style = MaterialTheme.typography.titleLarge)
-                        Text(text = superhero.durability, style = MaterialTheme.typography.bodyLarge)
+                        Text(text = "Durability", fontSize = 16.sp)
+                        Text(text = superhero.durability, fontSize = 18.sp, fontWeight = FontWeight.Bold)
                     }
                 }
             }
@@ -238,8 +238,8 @@ class ProfileComponent(private val onBackPressed: () -> Unit) {
                     Column(
                         modifier = Modifier.padding(dimensionResource(id = R.dimen.medium_spacing))
                     ) {
-                        Text(text = "Power", style = MaterialTheme.typography.titleLarge)
-                        Text(text = superhero.power, style = MaterialTheme.typography.bodyLarge)
+                        Text(text = "Power", fontSize = 16.sp)
+                        Text(text = superhero.power, fontSize = 18.sp, fontWeight = FontWeight.Bold)
                     }
                 }
                 Card(
@@ -251,8 +251,8 @@ class ProfileComponent(private val onBackPressed: () -> Unit) {
                     Column(
                         modifier = Modifier.padding(dimensionResource(id = R.dimen.medium_spacing))
                     ) {
-                        Text(text = "Combat", style = MaterialTheme.typography.titleLarge)
-                        Text(text = superhero.combat, style = MaterialTheme.typography.bodyLarge)
+                        Text(text = "Combat", fontSize = 16.sp)
+                        Text(text = superhero.combat, fontSize = 18.sp, fontWeight = FontWeight.Bold)
                     }
                 }
             }
