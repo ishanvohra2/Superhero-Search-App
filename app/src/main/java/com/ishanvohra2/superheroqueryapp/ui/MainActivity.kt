@@ -6,16 +6,14 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.ishanvohra2.superheroqueryapp.ui.components.HomeComponent
+import com.ishanvohra2.superheroqueryapp.ui.components.NewsComponent
 import com.ishanvohra2.superheroqueryapp.ui.components.ProfileComponent
 import com.ishanvohra2.superheroqueryapp.ui.theme.SuperheroQueryAppTheme
 import com.ishanvohra2.superheroqueryapp.viewModels.MainViewModel
@@ -38,7 +36,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     navController = rememberNavController()
-                    NavHost(navController = navController, startDestination = "home"){
+                    NavHost(navController = navController, startDestination = "news"){
                         composable("home"){
                             HomeComponent{
                                 viewModel.superhero = it
@@ -51,6 +49,9 @@ class MainActivity : ComponentActivity() {
                                     navController.popBackStack()
                                 }.Profile(superhero = s)
                             }
+                        }
+                        composable("news"){
+                            NewsComponent().NewsPage()
                         }
                     }
                 }
